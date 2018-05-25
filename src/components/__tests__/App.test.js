@@ -3,6 +3,8 @@ import { shallow } from 'enzyme';
 
 import App from '../App';
 import CommentBox from '../CommentBox';
+import CommentList from '../CommentList';
+
 
 
 it('shows a comment box', () => {
@@ -12,4 +14,10 @@ it('shows a comment box', () => {
   // expect "wrapped" to contain a "CommentBox". This returns an array with all items that match CommentBox and since
   // there should only be 1 CommentBox, this should equal 1
   expect(wrapped.find(CommentBox).length).toEqual(1);
+});
+
+it('shows a comment list', () => {
+  const wrapped = shallow(<App />);
+
+  expect(wrapped.find(CommentList).length).toEqual(1);
 });
