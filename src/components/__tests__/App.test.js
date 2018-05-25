@@ -5,7 +5,7 @@ import App from '../App';
 
 
 it('shows a comment box', () => {
-  const div = document.create('div');
+  const div = document.createElement('div');
 
   ReactDOM.render(<App />, div);
 
