@@ -33,6 +33,8 @@ it('clears the text area after form submission', () => {
     target: { value: 'new comment' }
   });
   wrapped.update();
+  // expectation below guards against a false positive
+  expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
 
   wrapped.find('form').simulate('submit');
   wrapped.update();
