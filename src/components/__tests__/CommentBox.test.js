@@ -25,9 +25,8 @@ describe('the text area', () => {
     });
     wrapped.update();
   });
-  
-  it('has a text area that users can type in', () => {
 
+  it('has a text area that users can type in', () => {
     expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
   });
 
