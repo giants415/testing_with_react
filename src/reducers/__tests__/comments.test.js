@@ -11,3 +11,10 @@ it('handles actions of type SAVE_COMMENT', () => {
 
   expect(newState).toEqual(['New Comment']);
 });
+
+// not "necessary" but useful for checking every aspect of reducers
+it('handles action with unknown type', () => {
+  const newState = commentsReducer([], { type: 'TEST_STATE'})
+
+  expect(newState).toEqual([]);
+});
