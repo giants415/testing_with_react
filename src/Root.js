@@ -5,9 +5,9 @@ import reducers from 'reducers';
 
 // props.children is a react construct - allows us to take component we just created and allows us to wrap other components
 
-export default (props) => {
+export default ({ children, initialState = {}}) => {
   return (
-    <Provider store={createStore(reducers, props.initialState)}>
+    <Provider store={createStore(reducers, initialState)}>
       {props.children}
     </Provider>
   );
