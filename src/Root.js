@@ -8,7 +8,7 @@ import reducers from 'reducers';
 export default ({ children, initialState = {}}) => {
   return (
     <Provider store={createStore(reducers, initialState)}>
-      {props.children}
+      {children}
     </Provider>
   );
 };
