@@ -16,7 +16,7 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-
+  moxios.uninstall();
 });
 
 it('can fetch a list of comments and display them', () => {
@@ -31,5 +31,5 @@ it('can fetch a list of comments and display them', () => {
   wrapped.find('.fetch-comments').simulate('click');
 
   //expect to find a list of comments
-  expect(wrapped.find('li').length).toEqual(500);
+  expect(wrapped.find('li').length).toEqual(2);
 });
