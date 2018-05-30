@@ -28,5 +28,7 @@ it('can fetch a list of comments and display them', () => {
 
   wrapped.find('.fetch-comments').simulate('click');
 
-  expect(wrapped.find('li').length).toEqual(2);
+  setTimeout(() => {
+    expect(wrapped.find('li').length).toEqual(2);
+  }, 100);
 });
