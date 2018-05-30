@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 
 class App extends Component {
+  renderHeader() {
+    return (
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/post">Post a Comment</Link>
+        </li>
+        <li>
+          {this.renderButton()}
+        </li>
+      </ul>
+    );
+  }
+
   render() {
     return (
       <div>
