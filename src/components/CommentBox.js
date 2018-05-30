@@ -5,6 +5,16 @@ import * as actions from 'actions';
 class CommentBox extends Component {
   state = { comment: '' };
 
+// component just got rendered
+  componentDidMount() {
+
+  }
+
+// our component just got updated
+  componentDidUpdate() {
+    
+  }
+
   handleChange = (event) => {
     this.setState({ comment: event.target.value });
   };
