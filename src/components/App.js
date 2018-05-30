@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
+import { connect } from 'react-router'
 
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 
 class App extends Component {
   renderButton() {
-    
+
   }
 
   renderHeader() {
@@ -35,4 +36,8 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return { auth: state.auth };
+}
+
+export default connect(mapStateToProps)(App);
