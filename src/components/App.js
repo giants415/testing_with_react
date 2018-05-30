@@ -4,8 +4,6 @@ import { Route } from 'react-router-dom';
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 
-import React, { Component } from 'react';
-
 class App extends Component {
   render() {
     return (
