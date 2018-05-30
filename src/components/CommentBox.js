@@ -7,12 +7,18 @@ class CommentBox extends Component {
 
 // component just got rendered
   componentDidMount() {
-
+    this.shouldNavigateAway();
   }
 
 // our component just got updated
   componentDidUpdate() {
-    
+    this.shouldNavigateAway();
+  }
+
+  shouldNavigateAway() {
+    if (!this.props.auth) {
+      console.log('I NEED TO LEAVE');
+    }
   }
 
   handleChange = (event) => {
