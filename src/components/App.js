@@ -5,6 +5,10 @@ import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 
 class App extends Component {
+  renderButton() {
+    
+  }
+
   renderHeader() {
     return (
       <ul>
