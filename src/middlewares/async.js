@@ -1,7 +1,7 @@
-export default function() {
-  return function() {
-    return function() {
-      
+export default function({ dispatch }) {
+  return function(next) {
+    return function(action) {
+
     }
   }
 }
